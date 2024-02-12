@@ -1,7 +1,7 @@
 # Ryan Lee's Personal Website
 
 Description:
-    In this lab, I designed and created my own personal website. It was very simple yet creative where I referenced the 
+    I designed and created my own personal website. It was very simple yet creative where I referenced the 
     website architecture designed I created to make the homepage, the projects page, and the CSS file that styles both 
     pages. This made it very easy to understand and navigate this lab and made it very fun to complete. My homepage contains
     tabs to my Projects page, my About Me portion of my home page, and the Contact Me portion of my home page. Then, it has my About
