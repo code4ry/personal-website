@@ -1,6 +1,4 @@
-# itws1100-leer10
-
-Ryan Lee's Personal Website
+# Ryan Lee's Personal Website
 
 Description:
     In this lab, I designed and created my own personal website. It was very simple yet creative where I referenced the 
