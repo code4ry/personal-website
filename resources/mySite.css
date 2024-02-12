@@ -1,0 +1,152 @@
+html{
+  background-image: url(lab3_background.jpg);
+  background-size: cover;
+}
+body{
+  color: white;
+  font-family: 'Nunito';
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+/* tabs from the website */
+
+#tabs{
+  border-bottom: 2px solid #333;
+  padding: 4px 0 4px 0;
+  margin-top: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+#tabs li{
+  display: inline;
+  list-style: none;
+  margin: 0 0.25em 0 0.25em;
+  font-size: 15px;
+}
+#labs_tabs{
+  padding: 4px 0 4px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+#labs_tabs li{
+  display: inline;
+  list-style: none;
+  margin: 0 0.25em 0 0.25em;
+  font-size: 15px;
+}
+
+/* all CSS for the index.html and projects.html of the website */
+
+.header{
+  text-align: center;
+  font-size: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#aboutme{
+  text-align: center;
+  font-size: 70px;
+}
+#contactme{
+  text-align: center;
+  font-size: 40px;
+}
+#contactInfo{
+  padding: 4px 0 4px 0;
+  margin-top: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+#contactInfo li{
+  display: inline;
+  list-style: none;
+  margin: 0 0.25em 0 0.25em;
+  font-size: 15px;
+}
+.descriptions{
+  text-align: center;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+.whoiam{
+  margin-left: 20px;
+}
+.whereifrom{
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.myEducationAndMyMission{
+  margin-left: 20px;
+}
+.titleOfPage{
+  margin: 0;
+  text-align: center;
+}
+.labTitles{
+  font-size: 50px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+/* CSS for images */
+
+img{
+  width: 500px;
+  height: 500px;
+  margin-right: 50px;
+}
+.picture1{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.picture2{
+  float: right;
+}
+.picture3{
+  float: left;
+  width: auto;
+  height: auto;
+  margin-left: 50px;
+}
+.picture4{
+  float: right;
+  width: auto;
+  height: auto;
+  margin-left: 50px;
+}
+.labPicture{
+  float: right;
+  width: 400px;
+  height: 200px;
+  margin-left: 20px;
+}
+
+/* CSS for the footer */
+
+#footer{
+  border-top: 2px solid #333;
+  padding: 4px 0 4px 0;
+  margin-top: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+#footer li{
+  display: inline;
+  list-style: none;
+  margin: 0 0.25em 0 0.25em;
+  font-size: 15px;
+}
