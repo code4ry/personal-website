@@ -1,21 +1,7 @@
-const NavBar = () => {
-  return (
-    <div className="navbar">
-      <a href="./index.html" className="logo">Ryan Lee</a>
-      <div className="nav-links">
-        <p>🡼 <a href="./index.html">Home</a></p>
-        <p>🡼 <a href="">About</a></p>
-        <p>🡼 <a href="">Portfolio</a></p>
-        <p>🡼 <a href="">Contact</a></p>
-      </div>
-    </div>
-  );
-};
-
 const Home = () => {
   const [typedText, setTypedText] = React.useState(''); 
   const [isTyping, setIsTyping] = React.useState(true);
-  const txt = '  Welcome. '; 
+  const txt = '  Welcome!'; 
   const speed = 100; 
 
   React.useEffect(() => {
@@ -39,9 +25,11 @@ const Home = () => {
     <div className="container">
       <h2 id="welcome">
         {typedText}
-        {isTyping && <span className="cursor">|</span>}
+        <span className="cursor">|</span>
       </h2>
-      <p>Inspired by Bruce.</p>
+      <p>
+        A software engineer with a passion for artificial intelligence and machine learning.
+      </p>
     </div>
   );
 };
@@ -49,35 +37,31 @@ const Home = () => {
 const Info = () => {
   return (
     <div className="info">
-      <div className="block">
-        <img src="./images/sample.jpg" alt="Description" />
-        <div className="block-text">
-          <h1 className="title">Projects</h1>
-          <h2>Explore My Projects</h2>
-          <p>Whatever</p>
+      <div className="exhibit">
+        <img src="./images/exhibit1.jpg" alt="Photo of code from Unsplash." />
+        <div className="exhibit-text">
+          <h1 className="title">Code in my collection</h1>
+          <p>
+            Delve into a curated collection of my diverse software development projects.
+            <br />
+            Each piece represents a unique challenge, a crafted solution, and an evolution of creativity and technical skill.
+            <br />
+            Click to step inside and experience the intersection of innovation and code.
+          </p>
+          <a href="./portfolio.html" className="exhibit-button">Explore my collection</a>
         </div>
       </div>
-      <div className="block">
-        <img src="./images/sample.jpg" alt="Description" />
-        <div className="block-text">
-          <h1 className="title">What's going on?</h1>
-          <h2>Discover</h2>
-          <p>Whatever</p>
+      <div className="exhibit">
+        <img src="./images/exhibit2.png" alt="Description" />
+        <div className="exhibit-text">
+          <h1 className="title">Meet the Creator</h1>
+          <p>
+            Every project tells a story, but behind each line of code lies the journey of the developer. 
+            <br />
+            Click to discover more about my background, my values, and the path that has shaped me into the software creator I am today.
+          </p>
+          <a href="./about.html" className="exhibit-button">Who am I?</a>
         </div>
-      </div>
-    </div>
-  );
-};
-
-const Footer = () => {
-  return (
-    <div id="footer">
-      <h2>Contact Me</h2>
-      <div id="footer-links">
-        <p>🡼 <a href="">GitHub</a></p>
-        <p>🡼 <a href="">LinkedIn</a></p>
-        <p>🡼 <a href="">Email</a></p>
-        <p>🡼 <a href="">About</a></p>
       </div>
     </div>
   );
