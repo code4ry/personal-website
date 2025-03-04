@@ -1,15 +1,74 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lexend Deca", serif;
   background-color: var(--offwhite);
-  margin: 0px;
-  padding: 0px;
-  background-image: url('./images/new-home-bkgrd.jpg');
+  margin: 0;
+  padding: 0;
   background-size: contain; 
   background-position: right; 
   background-repeat: no-repeat;
   height: 100vh;
   -webkit-font-smoothing: antialiased;
+  
+}
 
+/* transitioning between pages */
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes drop-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-back {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0.8;
+  }
+}
+
+::view-transition-old(root) {
+  animation: 1s cubic-bezier(0.87, 0, 0.13, 1) both drop-out,
+  0.4s cubic-bezier(0.87, 0, 0.13, 1) both fall-back;
+}
+
+@keyframes pop-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes come-in {
+  from {
+    scale: 0.8;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+::view-transition-new(root) {
+  animation: 1s cubic-bezier(0.87, 0, 0.13, 1) both pop-in,
+  1.4s cubic-bezier(0.87, 0, 0.13, 1) both come-in;
+  animation-delay: 0.4s;
 }
 
 /* nav */
@@ -33,12 +92,13 @@ body {
 .nav-links a {
   text-decoration: none;
   color: black;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
   box-sizing: border-box;
+  /* padding: 5px; */
 }
 
 .nav-links a:hover {
-  border: 3px solid;
+  outline: 3px solid black;
   box-shadow: 5px 5px;
 }
 
@@ -52,7 +112,7 @@ body {
 }
 
 .arrow {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .nav-links p:hover .arrow {
@@ -61,6 +121,7 @@ body {
 
 .logo {
   font-size: 30px;
+  padding: 3px;
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -79,13 +140,26 @@ body {
 
 /* welcome */
 .container {
-  padding: 200px 0;
+  display: flex;
   margin: 0;
   top: 40%;
 }
 
 .container p {
   padding-left: 30px;
+}
+
+.welcome-container {
+  padding: 200px 0;
+}
+
+.container img {
+  width: 800px;
+  padding-left: 30px;
+  height: auto;
+  animation: disappear 3s ease-out forwards;
+  animation-timeline: view();
+  animation-range: exit 0 cover 80%;
 }
 
 #welcome {
@@ -104,8 +178,22 @@ body {
 .cursor {
   animation: blink 1s step-start infinite;
 }
+
 @keyframes blink {
   50% { opacity: 0; }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    clip-path: inset(0 0 100% 100%);
+    visibility: hidden;
+  }
 }
 
 /* info */
@@ -113,7 +201,7 @@ body {
   animation: title-appear linear;
   animation-timeline: view();
   animation-range: entry 0 cover 20%;
-  margin: 130px 30px;
+  margin: 30px 30px;
   
 }
 
@@ -159,7 +247,7 @@ body {
   }
   to {
     opacity: 0;
-    clip-path: inset(100% 100% 0 0);
+    clip-path: inset(0 0 100% 100%);
   }
 }
 
@@ -167,13 +255,14 @@ body {
   display: flex;
   border: 5px solid;
   margin-top: 30px;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
   margin-bottom: 30px;
   padding-bottom: 30px;
   transition: all 0.2s;
   will-change: transform;
+
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
 }
 
 .exhibit:hover {
@@ -222,20 +311,49 @@ body {
 
 /* footer */
 #footer {
+  text-align: center;
   background-color: grey;
   margin-top: 30px;
   padding: 10px;
   padding-bottom: 30px;
-  animation: title-appear linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 15%;
+  border-top: 5px solid;
 }
 
 #footer-links {
   display: flex;
-  animation: title-appear linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 10%;
+  justify-content: center;
+  gap: 20px;
 }
 
+#footer-links a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
 
+#footer-links a:hover {
+  outline: 3px solid black;
+  box-shadow: 5px 5px;
+}
+
+#footer-links a:active{
+  border: none;
+  box-shadow: none;
+}
+
+#footer-links p {
+  display: flex;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+#footer-links p:hover .arrow {
+  transform: rotate(90deg);
+}
+
+#footer img {
+  padding-right: 5px;
+}

@@ -23,13 +23,16 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h2 id="welcome">
-        {typedText}
-        <span className="cursor">|</span>
-      </h2>
-      <p>
-        A software engineer with a passion for artificial intelligence and machine learning.
-      </p>
+      <div className="welcome-container">
+        <h2 id="welcome">
+          {typedText}
+          <span className="cursor">|</span>
+        </h2>
+        <p>
+          A software engineer with a passion for artificial intelligence and machine learning.
+        </p>
+      </div>
+      <img src='../images/new-home-bkgrd.jpg' alt="Photo of Ryan Lee at Bruce Museum"/>
     </div>
   );
 };

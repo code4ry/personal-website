@@ -1,11 +1,11 @@
 const NavBar = () => {
   return (
     <div className="navbar">
-      <a href="./index.html" className="logo">Ryan Lee</a>
+      <a href="./" className="logo">Ryan Lee</a>
       <div className="nav-links">
         <p>
           <span className="arrow">🡼</span>
-          <a href="./index.html">Home</a>
+          <a href="./">Home</a>
         </p>
         <p>
           <span className="arrow">🡼</span>
@@ -13,11 +13,11 @@ const NavBar = () => {
         </p>
         <p>
           <span className="arrow">🡼</span>
-          <a href="">Portfolio</a>
+          <a href="./portfolio.html">Portfolio</a>
         </p>
         <p>
           <span className="arrow">🡼</span>
-          <a href="">Contact</a>
+          <a href="#footer">Contact</a>
         </p>
       </div>
     </div>
