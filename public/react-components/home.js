@@ -29,7 +29,7 @@ const Home = () => {
           <span className="cursor">|</span>
         </h2>
         <p>
-          A software engineer with a passion for artificial intelligence and machine learning.
+          A software engineer passionate about artifical intelligence and machine learning, blending technical expertise with creative innovation.
         </p>
       </div>
       <img src='../images/new-home-bkgrd.jpg' alt="Photo of Ryan Lee at Bruce Museum"/>

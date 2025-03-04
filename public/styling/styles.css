@@ -7,10 +7,10 @@ body {
   background-color: var(--offwhite);
   margin: 0;
   padding: 0;
-  background-size: contain; 
-  background-position: right; 
+  /* background-image: url('../images/background.jpg'); */
+  background-size: cover; 
+  background-position: center; 
   background-repeat: no-repeat;
-  height: 100vh;
   -webkit-font-smoothing: antialiased;
   
 }
@@ -153,9 +153,16 @@ body {
   padding: 200px 0;
 }
 
+.welcome-container p {
+  font-size: 20px;
+}
+
 .container img {
   width: 800px;
   padding-left: 30px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
   height: auto;
   animation: disappear 3s ease-out forwards;
   animation-timeline: view();

@@ -5,11 +5,11 @@ const Footer = () => {
       <div id="footer-links">
         <p>
           <img src="./images/github-logo.png" alt="Github logo" width="20" height="20"/>
-          <a href="">Github</a>
+          <a href="https://github.com/code4ry/personal-website/" target="_blank">Github</a>
         </p>
         <p>
           <img src="./images/linkedin-logo.png" alt="LinkedIn logo" width="20" height="20"/>
-          <a href="">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/ryan-lee100/" target="_blank">LinkedIn</a>
         </p>
         <p>
           <span className="arrow">🡼</span>
